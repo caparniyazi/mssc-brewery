@@ -1,7 +1,6 @@
 package guru.springframework.msscbrewery.web.controller;
 
 import guru.springframework.msscbrewery.services.CustomerService;
-import guru.springframework.msscbrewery.web.model.BeerDto;
 import guru.springframework.msscbrewery.web.model.CustomerDto;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -25,7 +24,7 @@ public class CustomerController {
     }
     @PostMapping
     public  ResponseEntity handlePost(@RequestBody CustomerDto customerDto) {
-        CustomerDto savedDto = customerService.saveNeCustomer(customerDto);
+        CustomerDto savedDto = customerService.saveNewCustomer(customerDto);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Location", "/api/v1/customer/" + savedDto.getId().toString());
 

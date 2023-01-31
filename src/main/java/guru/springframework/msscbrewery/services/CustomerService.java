@@ -11,5 +11,5 @@ public interface CustomerService {
 
     void updateBeer(UUID customerId, CustomerDto customerDto);
 
-    CustomerDto saveNeCustomer(CustomerDto customerDto);
+    CustomerDto saveNewCustomer(CustomerDto customerDto);
 }
